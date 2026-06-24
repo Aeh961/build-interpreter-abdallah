@@ -36,17 +36,14 @@ documents.children = [photos, school]
 
 
 # Exercise 3 - Tree Vocabulary
-# 1. Root:
-# Your answer: Documents
+# 1. The root is Documents.
 #
-# 2. Leaves:
-# Your answer: beach.jpg, dog.png, CS101, Notes
+# 2. The leaves are beach.jpg, dog.png, CS101, and Notes.
 #
-# 3. Parent of Notes:
-# Your answer: School
+# 3. The parent of Notes is School.
 #
-# 4. Subtree rooted at Photos:
-# Your answer: Photos and its children, beach.jpg and dog.png
+# 4. The subtree rooted at Photos is Photos with its children, beach.jpg and
+# dog.png.
 
 
 # Exercise 4 - Recursive Factorial
@@ -75,10 +72,9 @@ def mystery(n: int) -> None:
 
 
 # Why does countdown(3) print 3 2 1, but mystery(3) prints 1 2 3?
-# Your answer: countdown prints before the recursive call, so each number is
-# printed while the calls are going deeper. mystery prints after the recursive
-# call, so it waits until the base case is reached and then prints as the calls
-# return.
+# countdown prints before the recursive call, so I see each number while the
+# calls are going deeper. mystery prints after the recursive call, so it waits
+# until the base case is reached and then prints as the calls return.
 
 
 # Exercise 6 - Count All Nodes
@@ -210,20 +206,22 @@ def pretty(node: ExprNode) -> str:
 
 # Part 6 - Reflection
 # 1. Why are trees useful for representing programs?
-# Your answer: Programs have nested structure, and trees show how smaller
-# pieces like numbers, operators, and expressions fit inside larger pieces.
+# I think trees are useful for representing programs because programs have
+# nested structure, and trees show how smaller pieces like numbers, operators,
+# and expressions fit inside larger pieces.
 #
 # 2. Why does recursion work well on trees?
-# Your answer: Each child of a tree is also a smaller tree, so the same function
-# can solve the problem for the current node and then for each child.
+# Recursion works well on trees because each child is also a smaller tree, so
+# the same function can solve the problem for the current node and then for each
+# child.
 #
 # 3. Why does the evaluator evaluate children before the parent?
-# Your answer: An operator needs the values of its left and right children
-# before it can combine them.
+# The evaluator has to evaluate the children first because an operator needs the
+# values of its left and right children before it can combine them.
 #
 # 4. What part of this homework was most confusing?
-# Your answer: The trickiest part was tracking whether work happens before or
-# after the recursive call, because that changes the order of the output.
+# The trickiest part for me was tracking whether work happens before or after
+# the recursive call, because that changes the order of the output.
 
 
 # Stretch 1 - Add Power Operator

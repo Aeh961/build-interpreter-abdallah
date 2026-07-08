@@ -49,10 +49,9 @@ class Parser:
         # expression -> term (PLUS term)*
         left = self.parse_term()
 
-        # TODO:
-        # while self.match(TokenType.PLUS):
-        #     right = self.parse_term()
-        #     left = BinaryOp("+", left, right)
+        while self.match(TokenType.PLUS):
+            right = self.parse_term()
+            left = BinaryOp("+", left, right)
 
         return left
 

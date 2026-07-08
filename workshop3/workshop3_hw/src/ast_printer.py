@@ -9,12 +9,20 @@ def pretty_ast(node, indent: str = "") -> str:
         return f"{indent}Number({node.value})"
 
     if isinstance(node, BinaryOp):
-        # TODO:
         # Return a multi-line representation of a BinaryOp.
         #
         # Hint:
         # left = pretty_ast(node.left, indent + "  ")
         # right = pretty_ast(node.right, indent + "  ")
-        raise NotImplementedError("TODO: pretty print BinaryOp")
+        left = pretty_ast(node.left, indent + "  ")
+        right = pretty_ast(node.right, indent + "  ")
+
+        return (
+            f"{indent}BinaryOp(\n"
+            f"{indent}  op={node.op!r},\n"
+            f"{indent}  left=\n{left},\n"
+            f"{indent}  right=\n{right}\n"
+            f"{indent})"
+        )
 
     raise TypeError(f"Unknown AST node: {node}")

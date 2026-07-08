@@ -25,10 +25,8 @@ def evaluate(node, env: Environment):
         return env.get(node.name)
 
     if isinstance(node, Assignment):
-        # TODO:
-        # 1. evaluate node.value
-        # 2. store it in env
-        # 3. return the stored value
-        raise NotImplementedError("TODO: evaluate Assignment")
+        value = evaluate(node.value, env)
+        env.define(node.name, value)
+        return value
 
     raise TypeError(f"Unknown AST node: {node}")

@@ -72,9 +72,9 @@ class Parser:
         token = self.peek()
 
         if token.type == TokenType.NUMBER:
-            # TODO:
             # Consume the number token and return Number(token.value).
-            raise NotImplementedError("TODO: parse number")
+            self.advance()
+            return Number(token.value)
 
         # Stretch:
         # if token.type == TokenType.LEFT_PAREN:

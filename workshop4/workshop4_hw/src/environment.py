@@ -11,8 +11,10 @@ class Environment:
         raise NameError(f"Variable {name!r} is not defined")
 
     def assign(self, name: str, value):
-        # TODO: update an existing name; otherwise raise NameError.
-        raise NotImplementedError("TODO: implement assign()")
+        if name in self.values:
+            self.values[name] = value
+            return value
+        raise NameError(f"Variable {name!r} is not defined")
 
     def __repr__(self) -> str:
         return f"Environment({self.values})"

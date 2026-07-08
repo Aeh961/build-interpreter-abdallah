@@ -59,10 +59,9 @@ class Parser:
         # term -> factor (STAR factor)*
         left = self.parse_factor()
 
-        # TODO:
-        # while self.match(TokenType.STAR):
-        #     right = self.parse_factor()
-        #     left = BinaryOp("*", left, right)
+        while self.match(TokenType.STAR):
+            right = self.parse_factor()
+            left = BinaryOp("*", left, right)
 
         return left
 

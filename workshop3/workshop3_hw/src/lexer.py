@@ -51,9 +51,10 @@ def tokenize(source: str) -> list[Token]:
             continue
 
         if char == "+":
-            # TODO:
             # Add a PLUS token and advance i.
-            raise NotImplementedError("TODO: lex +")
+            tokens.append(Token(TokenType.PLUS))
+            i += 1
+            continue
 
         if char == "*":
             # TODO:

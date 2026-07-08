@@ -22,8 +22,7 @@ def evaluate(node, env: Environment):
         raise ValueError(f"Unknown operator: {node.op}")
 
     if isinstance(node, Variable):
-        # TODO: look up node.name in env.
-        raise NotImplementedError("TODO: evaluate Variable")
+        return env.get(node.name)
 
     if isinstance(node, Assignment):
         # TODO:

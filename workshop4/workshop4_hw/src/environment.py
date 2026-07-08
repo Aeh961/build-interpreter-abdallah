@@ -3,8 +3,7 @@ class Environment:
         self.values = {}
 
     def define(self, name: str, value):
-        # TODO: store the value under the given name.
-        raise NotImplementedError("TODO: implement define()")
+        self.values[name] = value
 
     def get(self, name: str):
         # TODO: return the value if it exists; otherwise raise NameError.

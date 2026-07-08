@@ -5,9 +5,8 @@ def pretty_ast(node, indent: str = "") -> str:
     # Return a readable multi-line representation of an AST.
 
     if isinstance(node, Number):
-        # TODO:
         # Return something like: Number(1)
-        raise NotImplementedError("TODO: pretty print Number")
+        return f"{indent}Number({node.value})"
 
     if isinstance(node, BinaryOp):
         # TODO:

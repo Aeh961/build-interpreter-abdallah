@@ -57,9 +57,10 @@ def tokenize(source: str) -> list[Token]:
             continue
 
         if char == "*":
-            # TODO:
             # Add a STAR token and advance i.
-            raise NotImplementedError("TODO: lex *")
+            tokens.append(Token(TokenType.STAR))
+            i += 1
+            continue
 
         # Stretch / future:
         if char == "-":

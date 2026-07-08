@@ -7,11 +7,19 @@ def evaluate(node, env: Environment):
         return node.value
 
     if isinstance(node, BinaryOp):
-        # TODO:
-        # 1. evaluate left child
-        # 2. evaluate right child
-        # 3. apply node.op
-        raise NotImplementedError("TODO: evaluate BinaryOp")
+        left = evaluate(node.left, env)
+        right = evaluate(node.right, env)
+
+        if node.op == "+":
+            return left + right
+        if node.op == "-":
+            return left - right
+        if node.op == "*":
+            return left * right
+        if node.op == "/":
+            return left / right
+
+        raise ValueError(f"Unknown operator: {node.op}")
 
     if isinstance(node, Variable):
         # TODO: look up node.name in env.

@@ -25,11 +25,8 @@ class CustomLanguage:
         print(pretty_ast(ast))
 
     def run(self, source: str):
-        # TODO:
-        # 1. parse source
-        # 2. evaluate AST using self.env
-        # 3. return result
-        raise NotImplementedError("TODO: implement run()")
+        ast = self.parse(source)
+        return evaluate(ast, self.env)
 
     def repl(self) -> None:
         print("TinyLang REPL")
